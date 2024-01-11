@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <link rel="stylesheet" href="../Css/personaldata1.css">
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+</head>
+
+<body>
+    <h1 class="Heading">Registration Form</h1>
+    <form action="">
+        <div class="parentContainer">
+            <div class="containerI similarProp">
+
+                <label class="LABEL1" for="fname" class="LABEL1" id="Firstname">FirstName</label>
+                
+                <input class="INPUT1" type="text" id="fname" class="INPUT1" name="fname" maxlength="20">
+    
+                <label class="LABEL1" for="mname" id="lmname"class="LABEL1">Middle Name</label>
+    
+                <input class="INPUT1" type="text" id="mname" name="mname" class="INPUT1" maxlength="15">
+                
+                <label class="LABEL1" for="lname" id="llname" class="LABEL1">LastName</label>
+                
+                <input class="INPUT1" type="text" id="lname" name="lname" class="INPUT1" maxlength="20">
+                
+            </div>
+
+            <label class="LABEL1" for="Father" id="lfname" class="LABEL1">Father's name</label>
+            
+            <input class="INPUT1" type="text" id="Father" name="Father" class="INPUT1" maxlength="20">
+            
+            <label class="LABEL1" class="LABEL1" for="Mother" id="lmother">Mother's Name</label>
+            
+            <input class="INPUT1" class="INPUT1"type="text" id="Mother" name="Mother" maxlength="20">
+            
+            <label class="LABEL1" class="LABEL1" for="Phone" id="LabelPhone">Phone No.</label>
+            
+            <input class="INPUT1" class="INPUT1"type="tel" id="Phone" name="Phone" maxlength="13">
+            
+            <label class="LABEL1" for="Date" id="DOB">Date of Birth:</label>
+            
+            <input class="INPUT1" class="INPUT1"type="date" id="Date" name="Date" min="1960-01-01" max="2099-12-31">
+            
+            <label class="LABEL1" for="email" id="labelemail">Email</label>
+            
+            <input class="INPUT1" class="INPUT1"type="email" id="email" name="email" placeholder="someone@email.com">
+            
+            <label for="altemail" id="labelaltemail">Alt. email:</label>
+            
+            <input class="INPUT1" class="INPUT1"type="email" name="altemail" id="altemail" placeholder="someone@email.com">
+            
+            <div class="container1">
+                <label for="Country">Country</label>
+                
+                <select name="Country" id="Country">
+                    <option value="India" selected>India</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="China">China</option>
+                    <option value="Russia">Russia</option>
+                </select>
+                
+                <label for="State" id="labelState">State</label>
+                
+                <select name="state" id="state">
+                    <option value="">Ahemdabad</option>
+                    <option value="">chennai</option>
+                    <option value="">Mumbai</option>
+                    <option value="">Odisha</option>
+                    <option value={state5}>Delhi</option>
+                </select>
+            </div>
+            
+            <div class="container2">
+                <ul>
+                    <li>
+                        <label for="10Marks">10th Marks (%):</label>
+                        <input class="INPUT1" type="number" name="10Marks" id="B10Marks" min="35" max="100">
+
+                        <label for="Board" id="B10Board">Board:</label>
+                        <select name="Board" id="Board">
+                            <option value="ICSE">ICSE</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="CHSE">CHSE</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="12Marks">12th Marks (%):</label>
+                        <input class="INPUT1" type="number" name="12Marks" id="B12Marks" min="35" max="100">
+
+                        <label for="Board" id="B12Board">Board:</label>
+                        <select name="Board" id="Board12">
+                            <option value="ICSE">ICSE</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="CHSE">CHSE</option>
+                        </select>
+                    </li>
+                </ul>   
+            </div>
+            
+            <p>Optional subjects taken in 12th:</p>
+            <div class="container3">
+
+                <label for="ComputerScience" id="Computer">Computer Science</label>
+                <input class="INPUT1" type="radio" name="subjects" id="ComputerScience" value="ComputerScience">
+
+                <label for="Biology" id="BiologyLabel">Biology</label>
+                <input class="INPUT1" type="radio" name="subjects" id="Biology" value="Biology">
+
+                <label for="Math" id="MathLabel">Math</label>
+                <input class="INPUT1" type="radio" name="subjects" id="Math" value="Math">
+                
+
+                <span>Gender: </span>
+
+                <label class="LABEL1" for="male" id="labelmale">Male</label>
+                <input class="INPUT1" type="radio" name="gender" id="male">
+
+                <label class="LABEL1" for="female" id="labelfemale">Female</label>
+                <input class="INPUT1" type="radio" name="gender" id="female">
+
+                <label class="LABEL1" for="prefrnts" id="othergender">Prefer not to Say</label>
+                <input class="INPUT1" type="radio" id="prefrnts" name="gender">
+
+                <!-- <div class="languages"> -->
+
+                    <label class="LABEL1 LanguagesKnown" for="language">Languages Known</label>
+                    
+                    <label class="LABEL1 Hindi" for="Hindi">Hindi</label>
+                    <input class="INPUT1" type="checkbox" name="Hindi" id="Hindi">
+    
+                    <label class="LABEL1 English" for="English">English</label>
+                    <input class="INPUT1" type="checkbox" name="English" id="English">
+    
+                    <label class="LABEL1 Odia" for="odia">Odia</label>
+                    <input class="INPUT1" type="checkbox" name="Odia" id="Odia">
+    
+                    <label class="LABEL1 Tamil" for="Tamil">Tamil</label>
+                    <input class="INPUT1" type="checkbox" name="Tamil" id="Tamil">
+    
+                    <label class="LABEL1 Telgu" for="Telgu">Telgu</label>
+                    <input class="INPUT1" type="checkbox" name="Telgu" id="Telgu">
+    
+                    <label class="LABEL1 Malyalam" for="Malyalam">Malyalam</label>
+                    <input class="INPUT1" type="checkbox" name="Malyalam" id="Malyalam">
+    
+                    <label class="LABEL1 Marathi" for="Marathi">Marathi</label>
+                    <input class="INPUT1" type="checkbox" name="Marathi" id="Marathi">
+                <!-- </div> -->
+            </div>
+            
+            <div class="container4">
+                <label class="LABEL1 PresentAddress" for="Address">Present Address:</label>
+                
+                <textarea name="Address" id="Address" rows="5" cols="50" placeholder="enter your address"></textarea>
+                
+            </div>
+
+                <div class="container5">
+                    <label class="LABEL1 PermanentAddress" for="PAddress">Permanent Address:</label>
+                    
+                    <textarea name="PAddress" id="PAddress" rows="5" cols="50" placeholder="enter your address"></textarea>
+                    
+                </div>
+                <div class="container6">
+                    <label class="LABEL1 Hobby" for="Hobbies">Hobbies:</label>
+                    
+                    <textarea name="Hobbies" id="Hobbies" rows="5" cols="50"
+                        placeholder="Write whatever u want,just dont write something inappropriate :)">
+                        </textarea>
+                    
+                </div>
+                <div class="container7">
+                    <label class="LABEL1 Documents1" for="Documents upload">Upload Documents</label>
+                    
+                    <div class="docsUpload">
+                        <input class="INPUT1" type="file">
+                    </div>
+                    
+                </div>
+                <div class="container8">
+                    <label class="LABEL1 Additional" for="Additional Documents upload">Upload Additional Documents</label>
+                    
+                    <div class="docsUpload">
+                        <input class="INPUT1" type="file" name="Additional Documents upload" id="Additional Documents upload">
+                    </div>
+                    
+                </div>
+                <div class="Buttons">
+                    <input class="INPUT1" type="reset" value="reset" id="reset">
+                    <input class="INPUT1" type="submit" value="submit" id="submit">
+                </div>
+        </div>
+    </form>
+    <div class="logo">
+        <h1>Forms</h1>
+    </div>
+</body>
+
+</html>

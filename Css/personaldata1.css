@@ -1,0 +1,736 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #32de84;
+}
+
+.Heading {
+    position: relative;
+    top: 1rem;
+    max-height: 10em;
+    max-width: 13em;
+    display: block;
+    margin: auto;
+    /* border: 2px solid black; */
+    font-family: 'Abel';
+    text-align: center;
+}
+
+.parentContainer {
+    position: relative;
+    margin: auto;
+    height: 61rem;
+    width: 90vw;
+    top: 2rem;
+    border-radius: 16px;
+    border-style: none;
+    padding: 1rem;
+    background-color: #FEFEFA;
+    box-shadow: 8.0px 16.0px 18.0px hsl(0deg 0% 0% / 0.80);
+    overflow: hidden;
+
+    @media screen and (max-width:1000px) {
+        width: 22rem;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+p,
+label,
+input,
+textarea,
+select,
+span,
+option,
+li {
+    background-color: #FEFEFA;
+    font-family: 'Abel';
+}
+
+.containerI {
+    background-color: #FEFEFA;
+    position: absolute;
+    height: 5rem;
+    top: 1rem;
+    left: 1rem;
+    width: 100%;
+}
+
+input[type=file] {
+    background-color: #FEFEFA;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    background-color: #D0F0C0;
+}
+#Firstname{
+    position: absolute;
+    top: 0rem;
+    left: 0;
+}
+#fname{
+    position: absolute;
+    top: 1rem;
+    left: 0rem;
+}
+#lmname {
+    position: absolute;
+    left: 10rem;
+    top: 1rem;
+
+    @media screen and (max-width:1000px) {
+        left: 8rem;
+        top: 0rem;
+    }
+}
+
+#mname {
+    position: absolute;
+    top: 1rem;
+    left: 8rem;
+}
+
+#llname {
+    position: absolute;
+    top: 2.5rem;
+    left: 0rem;
+}
+
+#lname {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+}
+
+#lfname {
+    position: absolute;
+    top: 6.5rem;
+}
+
+#Father {
+    position: absolute;
+    top: 7.9rem;
+}
+
+#lmother {
+    position: absolute;
+    left: 9.5rem;
+    top: 6.6rem
+}
+
+#Mother {
+    position: absolute;
+    top: 7.9rem;
+    left: 9.5rem;
+}
+
+#LabelPhone {
+    position: absolute;
+    top: 9.5rem;
+}
+
+#Phone {
+    position: absolute;
+    top: 10.8rem;
+}
+
+#DOB {
+    position: absolute;
+    top: 9.5rem;
+    left: 9.5rem;
+}
+
+#Date {
+    position: absolute;
+    top: 10.8rem;
+    left: 9.5rem;
+}
+
+#labelemail {
+    position: absolute;
+    top: 12.8rem;
+}
+
+#email {
+    position: absolute;
+    top: 14.3rem;
+}
+
+#labelaltemail {
+    position: absolute;
+    top: 12.8rem;
+    left: 9.5rem;
+}
+
+#altemail {
+    position: absolute;
+    top: 14.3rem;
+    left: 9.5rem;
+}
+
+.container1 {
+    background-color: #FEFEFA;
+    position: absolute;
+    top: 16rem;
+}
+
+#labelState {
+    position: absolute;
+    top: 0;
+    left: 8.3rem;
+}
+
+#state {
+    position: absolute;
+    top: 1.2rem;
+    left: 8.3rem;
+}
+
+.container2 {
+    position: absolute;
+    background-color: #FEFEFA;
+    top: 19rem;
+}
+
+p {
+    position: absolute;
+    top: 22rem;
+}
+
+.container3 {
+    position: absolute;
+    top: 23.5rem;
+    background-color: #FEFEFA;
+    word-spacing: 2px;
+}
+
+.container4 {
+    position: absolute;
+    background-color: #FEFEFA;
+    top: 30rem;
+}
+
+.container5 {
+    position: absolute;
+    background-color: #FEFEFA;
+    top: 37rem;
+}
+
+.container6 {
+    position: absolute;
+    background-color: #FEFEFA;
+    top: 44rem;
+}
+
+.container7 {
+    position: absolute;
+    background-color: #FEFEFA;
+    top: 51rem;
+}
+
+.container8 {
+    position: absolute;
+    background-color: #FEFEFA;
+    top: 54rem;
+}
+
+.Buttons {
+    position: absolute;
+    background-color: #FEFEFA;
+    top: 57rem;
+    height: 4rem;
+    width: 20rem;
+    /* border: 2px solid black; */
+    display: flex;
+}
+
+input[type=reset] {
+    display: block;
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+input[type=reset]:hover {
+    display: block;
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+    font-size: large;
+    font-weight: bold;
+}
+
+input[type=submit] {
+    display: block;
+    margin-left: 4rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+input[type=submit]:hover {
+    display: block;
+    margin-left: 4rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+    font-size: large;
+    font-weight: bold;
+}
+
+.logo {
+    position: relative;
+    top: 4em;
+    text-align: center;
+    max-width: max-content;
+    margin: auto;
+    font-family: 'Abel';
+}
+
+@media screen and (min-width:1000px) {
+
+    .parentContainer {
+        height: 111rem;
+    }
+
+    p,
+    label,
+    textarea,
+    select,
+    span,
+    option,
+    li {
+        font-size: 30px;
+    }
+
+    .similarProp {
+        background-color: #FEFEFA;
+        position: absolute;
+        height: 5rem;
+        top: 1rem;
+        left: 1rem;
+        width: 100%;
+    }
+
+    .LABEL1,
+    .INPUT1 {
+        position: absolute;
+    }
+
+    #lmname {
+        left: 23.5rem;
+        top: 0;
+    }
+
+    #llname {
+        top: 0;
+        left: 49.5rem;
+    }
+
+    #fname {
+        top: 2.5rem;
+        width: 30%;
+        height: 50%;
+    }
+
+    #mname {
+        left: 23.5rem;
+        top: 2.5rem;
+        width: 33.33%;
+        height: 50%;
+    }
+
+    #lname {
+        left: 49.5rem;
+        top: 2.5rem;
+        width: 33.33%;
+        height: 50%;
+    }
+
+    #lmother {
+        left: 24.5rem;
+        top: 7rem;
+    }
+
+    #Mother {
+        top: 9rem;
+        left: 24.5rem;
+        height: 2.5rem;
+        width: 33.5%;
+    }
+
+    #lfname {
+        top: 7rem;
+        left: 1rem;
+    }
+
+    #Father {
+        top: 9rem;
+        left: 1rem;
+        height: 2.5rem;
+        width: 30%;
+    }
+
+    #LabelPhone {
+        top: 11.5rem;
+        left: 1rem;
+    }
+
+    #Phone {
+        top: 13.5rem;
+        left: 1rem;
+        height: 2rem;
+        width: 30%;
+    }
+
+    #DOB {
+        top: 11.5rem;
+        left: 24.5rem;
+    }
+
+    #Date {
+        top: 13.5rem;
+        width: 10%;
+        left: 24.5rem;
+        height: 2rem;
+    }
+
+    #labelemail {
+        top: 11.5rem;
+        left: 50.7rem;
+    }
+
+    #email {
+        top: 13.5rem;
+        left: 50.7rem;
+        width: 33%;
+        height: 2rem;
+    }
+
+    #labelaltemail {
+        top: 16rem;
+        left: 1rem;
+    }
+
+    #altemail {
+        top: 18rem;
+        left: 1rem;
+        width: 30%;
+        height: 3rem;
+    }
+
+    .container1 {
+        left: 24.5rem;
+        top: 18rem;
+    }
+
+    #labelState {
+        top: 0rem;
+        left: 26rem;
+    }
+
+    #state {
+        top: 0;
+        left: 30.5rem;
+    }
+
+    .container2 {
+        position: absolute;
+        top: 22rem;
+    }
+
+    #Board {
+        position: absolute;
+        left: 21rem;
+    }
+
+    #B10Marks {
+        height: 2rem;
+        top: 0.5rem;
+    }
+
+    #B10Board {
+        position: absolute;
+        left: 16rem;
+        top: 0.3rem;
+    }
+
+    #Board12 {
+        top: 3rem;
+        left: 21rem;
+        position: absolute;
+    }
+
+    #B12Marks {
+        height: 2rem;
+        top: 3rem;
+        left: 11.5rem;
+    }
+
+    #B12Board {
+        position: absolute;
+        top: 2.5rem;
+        left: 16rem;
+    }
+
+    p {
+        position: absolute;
+        top: 28rem;
+    }
+
+    .container3 {
+        position: absolute;
+        top: 30.5rem;
+    }
+
+    #Computer {
+        position: absolute;
+        top: -2.4rem;
+        left: 24rem;
+        width: 14rem;
+    }
+
+    #ComputerScience {
+        top: -1.5rem;
+        left: 38rem;
+    }
+
+    #BiologyLabel {
+        position: absolute;
+        top: -2.4rem;
+        left: 41rem;
+    }
+
+    #Biology {
+        top: -1.5rem;
+        left: 47rem;
+    }
+
+    #MathLabel {
+        position: absolute;
+        top: -2.4rem;
+        left: 51rem;
+    }
+
+    #Math {
+        top: -1.5rem;
+        left: 55.5rem;
+    }
+
+    span {
+        position: absolute;
+        top: 0.5rem;
+        left: 0rem;
+    }
+
+    #labelmale {
+        top: 0.5rem;
+        left: 6rem;
+    }
+
+    #male {
+        top: 1.5rem;
+        left: 10rem;
+    }
+
+    #labelfemale {
+        top: 0.5rem;
+        left: 12rem;
+    }
+
+    #female {
+        top: 1.5rem;
+        left: 18rem;
+    }
+
+    #prefrnts {
+        top: 1.5rem;
+        left: 33rem;
+    }
+
+
+    #othergender {
+        top: 0.5rem;
+        left: 20rem;
+        width: 13rem;
+    }
+
+    .LanguagesKnown {
+        position: absolute;
+        top: 3rem;
+        width: 14rem;
+    }
+
+    .Hindi {
+        top: 3rem;
+        left: 15rem;
+    }
+
+    #Hindi {
+        top: 4rem;
+        left: 19rem;
+    }
+
+    .English {
+        top: 3rem;
+        left: 22rem;
+    }
+
+    #English {
+        top: 4rem;
+        left: 27.5rem;
+    }
+
+    .Odia {
+        top: 3rem;
+        left: 30rem;
+    }
+
+    #Odia {
+        top: 4rem;
+        left: 33.5rem;
+    }
+
+    .Tamil {
+        top: 3rem;
+        left: 36rem;
+    }
+
+    #Tamil {
+        top: 4rem;
+        left: 40rem;
+    }
+
+    .Telgu {
+        top: 3rem;
+        left: 43rem;
+    }
+
+    #Telgu {
+        top: 4rem;
+        left: 47rem;
+    }
+
+    .Malyalam {
+        top: 3rem;
+        left: 50rem;
+    }
+
+    #Malyalam {
+        top: 4rem;
+        left: 57rem;
+    }
+
+    .Marathi {
+        top: 3rem;
+        left: 60rem;
+    }
+
+    #Marathi {
+        top: 4rem;
+        left: 65.5rem;
+    }
+
+    .container4 {
+        top: 36rem;
+        width: max-content;
+    }
+
+    .PresentAddress {
+        width: max-content;
+    }
+
+    #Address {
+        position: absolute;
+        top: 3rem;
+    }
+
+    .container5 {
+        position: absolute;
+        top: 52rem;
+    }
+
+    .PermanentAddress {
+        width: max-content;
+    }
+
+    #PAddress {
+        position: absolute;
+        top: 3rem;
+    }
+
+    .container6 {
+        position: absolute;
+        top: 68rem;
+    }
+
+    .Hobby {
+        width: max-content;
+    }
+
+    #Hobbies {
+        position: absolute;
+        top: 3rem;
+    }
+
+    .container7 {
+        top: 84rem;
+    }
+
+    .Documents1 {
+        width: max-content;
+    }
+
+    .docsUpload {
+        position: absolute;
+        top: 3rem;
+        border: 2px dashed green;
+        width: 42rem;
+        height: 7rem;
+        background: transparent;
+        padding-left: 16rem;
+        padding-top: 2rem;
+    }
+
+    .container8 {
+        top: 95rem;
+    }
+    .Additional{
+        width: max-content;
+    }
+    .Buttons {
+        top: 107rem;
+        width: 100%;
+    }
+    #reset{
+        left: 0%;
+    }
+    #submit{
+        left: 2rem;
+    }
+    /* #PAddress,#Hobbies{display: none;} */
+}
