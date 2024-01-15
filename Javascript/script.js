@@ -1,4 +1,5 @@
 //Form related script
+document.querySelector('.popupData').style.display='none'
 const form = document.querySelector('form')
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -88,6 +89,7 @@ function openPopup(fieldArray,additionalData) {
     //creating ul to store the fetched data in the list and show it to the popup div
     // const popup = document.querySelector('.popup')
     const popupData = document.querySelector('.popupData')
+    popupData.style.display='block'
     console.log(popupData)
     popupData.innerHTML = "";
     const ul = document.createElement('ul');
