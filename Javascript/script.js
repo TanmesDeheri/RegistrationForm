@@ -63,16 +63,20 @@ const formValidation=()=>{
     }
     else{
         flag=1;
+        result.innerHTML=""
     }
-    // if(flag==1)
+    if(flag==1)
     openPopup(fieldArray);
 }
 function openPopup(fieldArray){
-    console.log('popup works')
+    const popupToggle=document.querySelector('#popupContainer');
+    popupToggle.classList.add('popupShow')
+    console.log('popupData works')
     console.log(fieldArray)
-    const popup=document.querySelector('.popupData')
-    console.log(popup)
-    popup.innerHTML="";
+    const popup=document.querySelector('.popup')
+    const popupData=document.querySelector('.popupData')
+    console.log(popupData)
+    popupData.innerHTML="";
     const ul=document.createElement('ul');
     for(i=0;i<fieldArray.length;i++)
     {
@@ -81,5 +85,11 @@ function openPopup(fieldArray){
         li.textContent=fieldArray[i];
         ul.appendChild(li)
     }
-    popup.appendChild(ul)
+    popupData.appendChild(ul)
+    const closeButton=document.createElement('button')
+    closeButton.textContent='close';
+    popupData.appendChild(closeButton)
+    closeButton.addEventListener('click',()=>{
+        popupToggle.classList.remove('popupShow')
+        popupToggle.classList.add('popupClose')})
 }
