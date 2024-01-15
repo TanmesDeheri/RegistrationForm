@@ -19,7 +19,7 @@ const formValidation=()=>{
     const permanentAddress=document.getElementsByName('PAddress')[0].value;
     const hobbies=document.getElementsByName('Hobbies')[0].value;
     const result=document.getElementsByClassName('result')[0];
-    // const fieldArray=[firstName,middleName,lastName,fathersName,mothersName,phoneNo,email,tenthMarks,twelethMarks,presentAddress,permanentAddress];
+    const fieldArray=[firstName,lastName,fathersName,mothersName,phoneNo,email,tenthMarks,twelethMarks,presentAddress,permanentAddress];
     // fieldArray.forEach(validateRequiredFields);
     // function validateRequiredFields(input,index)
     // {
@@ -31,9 +31,11 @@ const formValidation=()=>{
     //         document.getElementsByClassName('result')[0].innerHTML=`${fieldArray[index]} required`;
     //     }
     // }
+    let flag=0;
     if(firstName.trim()=="")
     {
         result.innerHTML='first name required';
+        
     }
     else if(lastName.trim()=="")
     {
@@ -59,5 +61,25 @@ const formValidation=()=>{
     {
         result.innerHTML='marks required';
     }
-
+    else{
+        flag=1;
+    }
+    // if(flag==1)
+    openPopup(fieldArray);
+}
+function openPopup(fieldArray){
+    console.log('popup works')
+    console.log(fieldArray)
+    const popup=document.querySelector('.popupData')
+    console.log(popup)
+    popup.innerHTML="";
+    const ul=document.createElement('ul');
+    for(i=0;i<fieldArray.length;i++)
+    {
+        console.log(fieldArray[i]);
+        const li=document.createElement('li');
+        li.textContent=fieldArray[i];
+        ul.appendChild(li)
+    }
+    popup.appendChild(ul)
 }

@@ -745,5 +745,21 @@ input[type=submit]:hover {
        left: 16rem;
         
     }
+    .popup{
+        height: 50rem;
+        width: 50rem;
+        background-color:#FEFEFA;
+        position: absolute;
+        top: 5rem;
+        left: 20rem;
+        display: block;
+    }
+    .popupData{
+        height: 40rem;
+        width: 100%;
+        position: absolute;
+        top: 3rem;
+        background-color: #32de84;
+    }
     /* #PAddress,#Hobbies{display: none;} */
 }
