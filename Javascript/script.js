@@ -35,28 +35,29 @@ const formValidation=()=>{
     {
         result.innerHTML='first name required';
     }
-    if(lastName.trim()=="")
+    else if(lastName.trim()=="")
     {
         result.innerHTML='last name required';
     }
-    if(fathersName.trim()=="")
+    else if(fathersName.trim()=="")
     {
         result.innerHTML='father name required';
     }
-    if(mothersName.trim()=="")
+    else if(mothersName.trim()=="")
     {
         result.innerHTML='mothers name required';
     }
-    if(phoneNo=="")
+    else if(phoneNo=="")
     {
-        result.innerHTML='phone name required';
+        result.innerHTML='phone number required';
     }
-    if(email.trim()=="")
+    else if(email.trim()=="")
     {
         result.innerHTML='email required';
     }
-    if(tenthMarks=="" || twelethMarks=="")
+    else if(tenthMarks=="" || twelethMarks=="")
     {
         result.innerHTML='marks required';
     }
+
 }
