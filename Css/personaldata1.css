@@ -767,7 +767,7 @@ input[type=submit]:hover {
 
     .popupData {
         /* top: 8rem; */
-        height: 50rem;
+        height: 60rem;
         width: 100%;
         position: absolute;
         background-color:#FEFEFA;
@@ -796,15 +796,14 @@ input[type=submit]:hover {
     }
 
     .popupCloseButton {
-        cursor: pointer;
-        position: relative;
-        top: 5rem;
+        position: absolute;
+        top: 53rem;
         left: 19rem;
         height: 5rem;
         width: 10rem;
         border-radius: 10px;
         border-color: black;
     }
-
+    .popupCloseButton:hover{cursor: pointer;}
     /* #PAddress,#Hobbies{display: none;} */
 }

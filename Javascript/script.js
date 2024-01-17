@@ -16,7 +16,7 @@ const formValidation = () => {
     const email = document.getElementsByName('email')[0].value;
     const altEmail = document.getElementsByName('altemail')[0].value;
     const tenthMarks = document.getElementsByName('10Marks')[0].value;
-    const tenthBoard=document.getElementsByName('boardTen')[0].value;
+    const tenthBoard=document.getElementsByName('boardTenDropdown')[0].value;
     const twelethMarks = document.getElementsByName('12Marks')[0].value;
     const twelethBoard=document.getElementsByName('boardTwelve')[0].value;
     const presentAddress = document.getElementsByName('Address')[0].value;
@@ -26,36 +26,44 @@ const formValidation = () => {
     const dateOfBirth = document.getElementsByName('Date')[0].value;
     const country = document.getElementsByName('Country')[0].value
     const state = document.getElementsByName('state')[0].value
+    const uploadDocumentsInput=document.getElementById('requiredDocuments').value
+    const uploadAdditionalDocuments=document.getElementById('AdditionalDocumentsupload').value
     const gender = document.getElementsByName('gender')
     let genderSelected
-    for (let i = 0; i < gender.clientHeight; i++) {
+    for (let i = 0; i < gender.length; i++) {
         if (gender[i].checked) {
             genderSelected = gender[i].value
             break
         }
     }
-    for (const input in gender) {
-        if (input.checked) {
-            genderSelected = input.value
-            break
-        }
-    }
-    console.log(genderSelected)
-    // const optionalSubjects=document.getElementsByName('subjects')
-    // let optionalSubjectsSelected
-    // for (const input of optionalSubjects)
-    // {
-    //     if(input.checked)
-    //     {
-    //         optionalSubjectsSelected=input.value;
-    //         break;
+    // for (const input in gender) {
+    //     if (input.checked) {
+    //         genderSelected = input.value
+    //         break
     //     }
     // }
+    // console.log(genderSelected)
+    const optionalSubjects=document.getElementsByName('subjects')
+    let optionalSubjectsSelected
+    for (const input of optionalSubjects)
+    {
+        if(input.checked)
+        {
+            optionalSubjectsSelected=input.value;
+            break;
+        }
+    }
+    const languagesKnown=[]
+    const language=document.getElementsByName('Language')
+    for(let i=0;i<language.length;i++){
+        if(language[i].checked)
+        languagesKnown.push(language[i].value)
+    }
     const fieldArray = {
         'firstName': firstName,
         'lastName': lastName,
         'dateOfBirth': dateOfBirth,
-        // 'gender':genderSelected,
+        'gender':genderSelected,
         'fathersName': fathersName,
         'mothersName': mothersName,
         'phoneNo': phoneNo,
@@ -63,17 +71,20 @@ const formValidation = () => {
         'country':country,
         'state':state,
         'tenthMarks': tenthMarks,
-        'Board':tenthBoard,
+        'Tenth Board':tenthBoard,
         'twelethMarks': twelethMarks,
-        'Board':twelethBoard,
-        // 'optionalSubject':optionalSubjectsSelected,
+        'Twelve Board':twelethBoard,
+        'optionalSubject':optionalSubjectsSelected,
+        'Languages Known':languagesKnown,
         'presentAddress': presentAddress,
-        'permanentAddress': presentAddress
+        'permanentAddress': presentAddress,
+        'Required Documents':uploadDocumentsInput
     };
     const additionalData = {
         'middleName': middleName,
         'altemail': altEmail,
-        'hobbies': hobbies
+        'hobbies': hobbies,
+        'Additional Docs':uploadAdditionalDocuments
     }
     // fieldArray.forEach(validateRequiredFields);
     // function validateRequiredFields(input,index)
@@ -114,12 +125,19 @@ const formValidation = () => {
     else if (presentAddress.trim() == "" || permanentAddress.trim() == "") {
         result.innerHTML = 'Address required';
     }
-    // else if (genderSelected == "") {
-    //     result.innerHTML = 'Gender required';
-    // }
-    // else if (optionalSubjectsSelected=="") {
-    //     result.innerHTML = 'Optional subjects required';
-    // }
+    else if (genderSelected == undefined) {
+        result.innerHTML = 'Gender required';
+    }
+    else if(uploadDocumentsInput.length==0)
+    {
+        result.innerHTML='upload required Files'
+    }
+    else if (optionalSubjectsSelected==undefined) {
+        result.innerHTML = 'Optional subjects required';
+    }
+    else if (languagesKnown.length==0) {
+        result.innerHTML = 'select atleast one language';
+    }
     else {
         const yearOfbirth = parseInt(dateOfBirth.substring(0, 4), 10)
         if (yearOfbirth > 2004) {
