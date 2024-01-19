@@ -31,7 +31,7 @@ html {
     border-style: none;
     padding: 1rem;
     background-color: #FEFEFA;
-    box-shadow: 8.0px 16.0px 18.0px hsl(0deg 0% 0% / 0.80);
+    box-shadow: 8.0px 16.0px 18.0px hsl(0deg 0% 0% / 0.20);
     overflow: hidden;
 
     @media screen and (max-width:1000px) {
@@ -773,7 +773,7 @@ input[type=submit]:hover {
         background-color:#FEFEFA;
         border-radius: 10px;
         border-top-right-radius: 10px;
-        box-shadow: 8.0px 16.0px 18.0px hsl(0deg 0% 0% / 0.80);
+        box-shadow: 8.0px 16.0px 18.0px hsl(0deg 0% 0% / 0.20);
         /* display: none; */
     }
 

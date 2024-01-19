@@ -1,5 +1,40 @@
 //Form related script
 document.querySelector('.popupData').style.display = 'none'
+const countryAndStateData={
+    "CHINA":['Beijing', 'Tianjin', 'Shanghai','Chongqing'],
+    "RUSSIA":["Primorsky Krai","Khabarovsk krai","Buryatia","Krasnodar Krai"],
+    "INDIA":["New Delhi","Mumbai","Odisha","Uttar Pradesh"],
+    "USA":["Alaska","Arizona","California","Rhode Island","Ohio"]
+}
+function showCountry(){
+    const selectCountryDropdown=document.getElementById('Country');
+    for(const input in countryAndStateData)
+    {
+        const option=document.createElement('option');
+        option.value=input;//storing the keys to the options
+        option.textContent=input;
+        selectCountryDropdown.appendChild(option);
+    }
+
+}
+function updateAndShowStates(){
+    const selectCountryDropdown=document.getElementById('Country');
+    const selectStateDropdown=document.getElementById('state');
+    const selectedCountry=selectCountryDropdown.value;
+    const groupOfStates=countryAndStateData[selectedCountry] || [];//storing the values of states accoring to the key country is selected
+    selectStateDropdown.innerHTML="";
+    for(const input in groupOfStates)
+    {
+        const option=document.createElement('option');
+        option.value=groupOfStates[input];
+        option.textContent=groupOfStates[input];
+        selectStateDropdown.appendChild(option);
+    }
+}
+showCountry();
+updateAndShowStates();//writing it for the initial/default country select option
+document.getElementById('Country').addEventListener("change",updateAndShowStates);
+
 const form = document.querySelector('form')
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -148,10 +183,15 @@ const formValidation = () => {
             result.innerHTML = ""
         }
     }
-    if (flag == 1)
+    // if (flag == 1)//most essential condition for opening popup
         openPopup(fieldArray, additionalData);
 }
 function openPopup(fieldArray, additionalData) {
+    const jumpToTopSection=document.createElement('a');
+    const attr=document.createAttribute('href');
+    attr.value="#firstPage";
+    jumpToTopSection.setAttributeNode(attr);
+    jumpToTopSection.click();//the click method simulates the mouse click hence it will click on anchor tag automatically.
     //code for popup open and close 
     const popupToggle = document.querySelector('#popupContainer');
     popupToggle.classList.add('popupShow')

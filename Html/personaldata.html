@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Details</title>
-    <link rel="stylesheet" href="../Css/personaldata1.css">
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Details</title>
+        <link rel="stylesheet" href="../Css/personaldata1.css">
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        
 </head>
 
 <body>
+    <span id="firstPage"></span>
     <h1 class="Heading">Registration Form</h1>
     <form name="registrationForm" >
         <div class="parentContainer">
             <div class="containerI similarProp">
 
-                <label class="LABEL1" for="fname" class="LABEL1" id="Firstname" >FirstName</label>
+                <label class="LABEL1" for="fname" class="LABEL1" id="Firstname" >First Name:</label>
                 
-                <input class="INPUT1" type="text" id="fname" class="INPUT1" name="fname" maxlength="20" value=>
+                <input class="INPUT1" type="text" id="fname" class="INPUT1" name="fname" maxlength="30" placeholder="Example.John">
     
-                <label class="LABEL1" for="mname" id="lmname"class="LABEL1">Middle Name</label>
+                <label class="LABEL1" for="mname" id="lmname"class="LABEL1" >Middle Name:</label>
     
-                <input class="INPUT1" type="text" id="mname" name="mname" class="INPUT1" maxlength="15">
+                <input class="INPUT1" type="text" id="mname" name="mname" class="INPUT1" maxlength="15" placeholder="Example.Miller">
                 
-                <label class="LABEL1" for="lname" id="llname" class="LABEL1">LastName</label>
+                <label class="LABEL1" for="lname" id="llname" class="LABEL1">LastName:</label>
                 
-                <input class="INPUT1" type="text" id="lname" name="lname" class="INPUT1" maxlength="20">
+                <input class="INPUT1" type="text" id="lname" name="lname" class="INPUT1" maxlength="20" placeholder="Example.Joe">
                 
             </div>
 
-            <label class="LABEL1" for="Father" id="lfname" class="LABEL1">Father's name</label>
+            <label class="LABEL1" for="Father" id="lfname" class="LABEL1">Father's name:</label>
             
-            <input class="INPUT1" type="text" id="Father" name="Father" class="INPUT1" maxlength="20">
+            <input class="INPUT1" type="text" id="Father" name="Father" class="INPUT1" maxlength="20" placeholder="Example.Samuel">
             
-            <label class="LABEL1" class="LABEL1" for="Mother" id="lmother">Mother's Name</label>
+            <label class="LABEL1" class="LABEL1" for="Mother" id="lmother">Mother's Name:</label>
             
-            <input class="INPUT1" class="INPUT1"type="text" id="Mother" name="Mother" maxlength="20">
+            <input class="INPUT1" class="INPUT1"type="text" id="Mother" name="Mother" maxlength="20" placeholder="Example.Alex">
             
-            <label class="LABEL1" class="LABEL1" for="Phone" id="LabelPhone">Phone No.</label>
+            <label class="LABEL1" class="LABEL1" for="Phone" id="LabelPhone">Phone No:</label>
             
-            <input class="INPUT1" class="INPUT1"type="tel" id="Phone" name="Phone" maxlength="13">
+            <input class="INPUT1" class="INPUT1"type="tel" id="Phone" name="Phone" placeholder="XX-XXXXX-XXXXX" pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}">
             
             <label class="LABEL1" for="Date" id="DOB">Date of Birth:</label>
             
             <input class="INPUT1" class="INPUT1"type="date" id="Date" name="Date" min="1960-01-01" max="2099-12-31">
             
-            <label class="LABEL1" for="email" id="labelemail">Email</label>
+            <label class="LABEL1" for="email" id="labelemail">Email:</label>
             
             <input class="INPUT1" class="INPUT1"type="email" id="email" name="email" placeholder="someone@email.com">
             
@@ -54,24 +57,16 @@
             <input class="INPUT1" class="INPUT1"type="email" name="altemail" id="altemail" placeholder="someone@email.com">
             
             <div class="container1">
-                <label for="Country">Country</label>
+                <label for="Country" id="countryLabel">Country:</label>
                 
                 <select name="Country" id="Country">
-                    <option value="India" >India</option>
-                    <option value="Pakistan">Pakistan</option>
-                    <option value="Bangladesh">Bangladesh</option>
-                    <option value="China">China</option>
-                    <option value="Russia">Russia</option>
+                    
                 </select>
                 
-                <label for="State" id="labelState">State</label>
+                <label for="State" id="labelState">State:</label>
                 
                 <select name="state" id="state">
-                    <option value="Ahemdabad">Ahemdabad</option>
-                    <option value="chennai">chennai</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Odisha">Odisha</option>
-                    <option value="Delhi">Delhi</option>
+                   
                 </select>
             </div>
             
@@ -154,7 +149,7 @@
             </div>
             
             <div class="container4">
-                <label class="LABEL1 PresentAddress" for="Address">Present Address:</label>
+                <label class="LABEL1 PresentAddress" for="Address" id="presentAddressLabel">Present Address:</label>
                 
                 <textarea name="Address" id="Address" rows="5" cols="50" placeholder="enter your address"></textarea>
                 
@@ -169,9 +164,7 @@
                 <div class="container6">
                     <label class="LABEL1 Hobby" for="Hobbies">Hobbies:</label>
                     
-                    <textarea name="Hobbies" id="Hobbies" rows="5" cols="50"
-                        placeholder="Write whatever u want,just dont write something inappropriate :)">
-                        </textarea>
+                    <textarea name="Hobbies" id="Hobbies" rows="5" cols="50"placeholder="What do you Like To do?"></textarea>
                     
                 </div>
                 <div class="container7">
