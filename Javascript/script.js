@@ -183,7 +183,7 @@ const formValidation = () => {
             result.innerHTML = ""
         }
     }
-    // if (flag == 1)//most essential condition for opening popup
+    if (flag == 1)//most essential condition for opening popup
         openPopup(fieldArray, additionalData);
 }
 function openPopup(fieldArray, additionalData) {
