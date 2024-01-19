@@ -31,7 +31,7 @@ html {
     border-style: none;
     padding: 1rem;
     background-color: #FEFEFA;
-    box-shadow: 8.0px 16.0px 18.0px hsl(0deg 0% 0% / 0.80);
+    box-shadow: 8.0px 16.0px 18.0px hsl(0deg 0% 0% / 0.20);
     overflow: hidden;
 
     @media screen and (max-width:1000px) {
@@ -75,16 +75,19 @@ textarea {
     border-color: white;
     background-color: #D0F0C0;
 }
-#Firstname{
+
+#Firstname {
     position: absolute;
     top: 0rem;
     left: 0;
 }
-#fname{
+
+#fname {
     position: absolute;
     top: 1rem;
     left: 0rem;
 }
+
 #lmname {
     position: absolute;
     left: 10rem;
@@ -301,12 +304,13 @@ input[type=submit]:hover {
     font-size: large;
     font-weight: bold;
 }
-.result{
+
+.result {
     position: absolute;
     top: 59.5rem;
     left: 1rem;
     color: red;
-    
+
 }
 
 .logo {
@@ -321,7 +325,7 @@ input[type=submit]:hover {
 @media screen and (min-width:1000px) {
 
     .parentContainer {
-        height: 111rem;
+        height: 113rem;
     }
 
     p,
@@ -726,24 +730,80 @@ input[type=submit]:hover {
     .container8 {
         top: 95rem;
     }
-    .Additional{
+
+    .Additional {
         width: max-content;
     }
+
     .Buttons {
         top: 107rem;
         width: 100%;
     }
-    #reset{
+
+    #reset {
         left: 0%;
     }
-    #submit{
+
+    #submit {
         left: 2rem;
     }
-    .result{
+
+    .result {
         position: absolute;
-       top: 107rem;
-       left: 16rem;
-        
+        top: 107rem;
+        left: 16rem;
+
     }
+
+    .popupClose {
+        /* height: 50rem;
+        width: 50rem;
+        background-color:#d6d61f;
+        position: absolute;
+        top: 5rem;
+        left: 20rem; */
+        display: none;
+    }
+
+    .popupData {
+        /* top: 8rem; */
+        height: 60rem;
+        width: 100%;
+        position: absolute;
+        background-color:#FEFEFA;
+        border-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: 8.0px 16.0px 18.0px hsl(0deg 0% 0% / 0.20);
+        /* display: none; */
+    }
+
+    .popupShow {
+        height: 50rem;
+        width: 50rem;
+        background-color: #5ef324;
+        position: absolute;
+        top: 5rem;
+        left: 20rem;
+        display: block;
+        border-radius: 10px;
+    }
+
+    .popupDataList {
+        padding-left: 3rem;
+        background-color: #FEFEFA;
+        border-radius: 10px;
+        height: 76%;
+    }
+
+    .popupCloseButton {
+        position: absolute;
+        top: 53rem;
+        left: 19rem;
+        height: 5rem;
+        width: 10rem;
+        border-radius: 10px;
+        border-color: black;
+    }
+    .popupCloseButton:hover{cursor: pointer;}
     /* #PAddress,#Hobbies{display: none;} */
 }
