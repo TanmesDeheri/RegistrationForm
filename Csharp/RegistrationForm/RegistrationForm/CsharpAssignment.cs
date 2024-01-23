@@ -115,7 +115,24 @@ namespace Assignment1
         }
         void EditFiles()
         {
-            //method for editing files
+            Console.WriteLine("Enter The Name Of The File");
+            string input=Console.ReadLine();
+            if(File.Exists(input))
+            {
+                Console.WriteLine("Enter the Text You Want to Enter");
+                string text=Console.ReadLine();
+                text = text.Trim();
+                using(StreamWriter sw=File.AppendText(input))
+                {
+                    sw.WriteLine(text);
+                }
+            }
+            else
+            {
+                Console.WriteLine("File Does not exists");
+                if(YesOrNo() =='Y')
+                    Menu();
+            }
         }
         void DeleteFiles()
         {
