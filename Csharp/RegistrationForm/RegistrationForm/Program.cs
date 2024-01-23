@@ -13,7 +13,6 @@ namespace RegistrationForm
             int a = 50;
             Console.WriteLine(a);
             Console.WriteLine(Convert.ToString(a), a + 10);
-            Console.WriteLine(a+30);
         }
     }
 }
