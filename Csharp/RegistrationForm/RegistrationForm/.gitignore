@@ -1,1 +1,8 @@
+#ignored bin folder
 bin/
+#ignored obj folder
+obj/
+#ignored Properties folder
+Properties/
+#ignored .vs Folder
+.vs/
