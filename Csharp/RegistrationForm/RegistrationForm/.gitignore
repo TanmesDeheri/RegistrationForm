@@ -1,6 +1,0 @@
-#config,csproject files will be ignored
-obj/
-bin/
-Properties/
-.vs/
-.config

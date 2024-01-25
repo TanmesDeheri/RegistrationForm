@@ -1,5 +1,5 @@
 #These files are ignored
-\.vs
+/RegistrationForm/Csharp/RegistrationForm/RegistrationForm/.vs
 *.sln
 .config
 .csproj
