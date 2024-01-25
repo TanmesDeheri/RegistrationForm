@@ -1,7 +1,0 @@
-D:\RegistrationForm\Csharp\RegistrationForm\RegistrationForm\obj\Debug\RegistrationForm.csproj.AssemblyReference.cache
-D:\RegistrationForm\Csharp\RegistrationForm\RegistrationForm\obj\Debug\RegistrationForm.csproj.CoreCompileInputs.cache
-D:\RegistrationForm\Csharp\RegistrationForm\RegistrationForm\bin\Debug\RegistrationForm.exe.config
-D:\RegistrationForm\Csharp\RegistrationForm\RegistrationForm\bin\Debug\RegistrationForm.exe
-D:\RegistrationForm\Csharp\RegistrationForm\RegistrationForm\bin\Debug\RegistrationForm.pdb
-D:\RegistrationForm\Csharp\RegistrationForm\RegistrationForm\obj\Debug\RegistrationForm.exe
-D:\RegistrationForm\Csharp\RegistrationForm\RegistrationForm\obj\Debug\RegistrationForm.pdb
