@@ -1,9 +1,9 @@
 #These files are ignored
 /RegistrationForm/Csharp/RegistrationForm/RegistrationForm/.vs
 *.sln
-.config
-.csproj
-.csproj.user
+*.config
+*.csproj
+*.csproj.user
 /RegistrationForm/Csharp/RegistrationForm/RegistrationForm/
 /RegistrationForm/Csharp/RegistrationForm/RegistrationForm/obj
 /RegistrationForm/Csharp/RegistrationForm/RegistrationForm/Properties
