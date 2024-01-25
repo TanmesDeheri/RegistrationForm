@@ -1,1 +1,7 @@
 *.sln
+.config
+.csproj
+.csproj.user
+/RegistrationForm/Csharp/RegistrationForm/RegistrationForm/
+/RegistrationForm/Csharp/RegistrationForm/RegistrationForm/obj
+/RegistrationForm/Csharp/RegistrationForm/RegistrationForm/Properties
