@@ -1,4 +1,5 @@
-.vs
+#These files are ignored
+\.vs
 *.sln
 .config
 .csproj
