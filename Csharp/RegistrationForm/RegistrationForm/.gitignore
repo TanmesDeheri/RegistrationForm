@@ -1,4 +1,5 @@
 #config,csproject files will be ignored
-.config
-.csproj
-.csproj.user
+obj/
+bin/
+Properties/
+.vs/
