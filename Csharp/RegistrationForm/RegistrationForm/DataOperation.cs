@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace RegistrationForm
 {
@@ -19,7 +20,7 @@ namespace RegistrationForm
             SqlConnection connectionToDataBase = null;
             try
             {
-                connectionToDataBase = new SqlConnection("Data Source=.;database=AdventureWorks2022;Integrated Security=SSPI");
+                connectionToDataBase = new SqlConnection(ConfigurationManager.ConnectionStrings["ticketNotification.Properties.Settings.ticketsConnectionString"].ConnectionString);
                 SqlCommand retrieveData = new SqlCommand("SELECT TOP 50 FirstName,LastName FROM Person.Person", connectionToDataBase);
                 connectionToDataBase.Open();
                 SqlDataReader showData = retrieveData.ExecuteReader();
