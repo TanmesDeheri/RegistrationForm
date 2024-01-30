@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.IO;
 
 namespace RegistrationForm
 {
@@ -23,10 +24,21 @@ namespace RegistrationForm
                     Console.WriteLine();
                     Console.WriteLine("2nd Method");
                     ShowAccountNumber(connectionToDB);//Method For 2nd Stored Procedure
+                    Console.WriteLine();
+                    Console.WriteLine("3rd Method");
+                    ShowEmailAndPasswordHash(connectionToDB);
+                    Console.WriteLine();
             };
             }
             catch(Exception ex)
             {
+                string path = ConfigurationManager.AppSettings["LogFilePath"];
+                string LogFileTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ");
+                using (StreamWriter sw=File.AppendText(path))
+                    {
+                    sw.WriteLine(LogFileTime+" :- "+ex);//Error/Exception message is written on the LogFile.txt
+                };
+                StoreErrorInTable(LogFileTime,ex);//method to store error in table
                 Console.WriteLine("Error: "+ex.Message);
             }
                 Console.ReadKey();
@@ -81,11 +93,36 @@ namespace RegistrationForm
                 {
                     Console.WriteLine("CustomerId Does'nt Exist !!!");
                 }
+                reader.Close();
             }
             else
             {
                 Console.WriteLine("Invalid CustomerId");
             }
+        }
+        static void ShowEmailAndPasswordHash(SqlConnection connectionToDB)
+        {
+            SqlDataAdapter retrieveData = new SqlDataAdapter("SELECT TOP 50 * FROM Person.EmailAddress;SELECT TOP 50 * FROM Person.Password", connectionToDB);
+            DataSet dataSet=new DataSet();
+            retrieveData.Fill(dataSet);
+            DataTable emailAddress = dataSet.Tables[0];
+            DataTable passwordHash = dataSet.Tables[1];
+            foreach(DataRow row in emailAddress.Rows)
+            {
+                Console.Write($"Business Entity ID: {row["BusinessEntityID"]} \t Email Address: {row["EmailAddress"]} \t");
+                DataView dataView = passwordHash.DefaultView;
+                dataView.RowFilter = "BusinessEntityID = " + row["BusinessEntityID"];
+                foreach(DataRowView rowView in dataView)
+                {
+                    DataRow passwd = rowView.Row;
+                Console.Write($"PasswordHash: {passwd["PasswordHash"]} \t PasswordSalt: {passwd["PasswordSalt"]} \t");
+                }
+                Console.WriteLine();
+            }
+        }
+        static void StoreErrorInTable(string LogFileTime,Exception ex)
+        {
+
         }
     }
 }
