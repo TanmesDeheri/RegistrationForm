@@ -20,7 +20,7 @@ namespace RegistrationForm
             SqlConnection connectionToDataBase = null;
             try
             {
-                connectionToDataBase = new SqlConnection(ConfigurationManager.ConnectionStrings["ticketNotification.Properties.Settings.ticketsConnectionString"].ConnectionString);
+                connectionToDataBase = new SqlConnection(ConfigurationManager.ConnectionStrings["DataBaseConnection"].ConnectionString);
                 SqlCommand retrieveData = new SqlCommand("SELECT TOP 50 FirstName,LastName FROM Person.Person", connectionToDataBase);
                 connectionToDataBase.Open();
                 SqlDataReader showData = retrieveData.ExecuteReader();

@@ -1,4 +1,4 @@
-/*Use AdventureWorks2022;
+Use AdventureWorks2022;
 Select * From HumanResources.Department;
 SELECT DISTINCT GroupName from HumanResources.Department;
 
@@ -28,3 +28,11 @@ EXEC NameLoginEndDate;
 SELECT * FROM Person.Person ORDER BY LastName ASC;
 SELECT FirstName AS firstname, LastName AS lastname,BusinessEntityID AS employee_id FROM Person.Person;
 SELECT ProductID,ProductNumber,Name AS ProductName FROM Production.Product WHERE SellStartDate IS NOT NULL AND ProductLine='T' ORDER BY Name;*/
+EXEC NameLoginEndDate;
+SELECT * FROM Sales.Customer ;
+CREATE PROCEDURE SalesCustomerAccountNumber(@CustomerId TINYINT) AS
+SELECT * FROM Sales.Customer WHERE CustomerID=@CustomerId;
+ALTER PROCEDURE SalesCustomerAccountNumber(@CustomerId INT)
+AS
+SELECT * FROM Sales.Customer WHERE CustomerID=@CustomerId;
+EXEC SalesCustomerAccountNumber 30118;
