@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="26b060978d664064a635635dfc5de31d" Name="Diagram1">
+        <EntityTypeShape EntityType="EmployeeModel.Department" Width="1.5" PointX="2.625" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeModel.Employee" Width="1.5" PointX="5.375" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="EmployeeModel.FK__Employees__Depar__398D8EEE" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EmployeeModel.Course" Width="1.5" PointX="3.5" PointY="10" />
+        <EntityTypeShape EntityType="EmployeeModel.Standard" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EmployeeModel.Student" Width="1.5" PointX="3.5" PointY="6.625" />
+        <EntityTypeShape EntityType="EmployeeModel.StudentAddress" Width="1.5" PointX="6.125" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeModel.Teacher" Width="1.5" PointX="0.875" PointY="9.875" />
+        <EntityTypeShape EntityType="EmployeeModel.vwStudentCourse" Width="1.5" PointX="6.375" PointY="10" />
+        <AssociationConnector Association="EmployeeModel.FK__Course__TeacherI__412EB0B6" />
+        <AssociationConnector Association="EmployeeModel.FK__Student__Standar__440B1D61" />
+        <AssociationConnector Association="EmployeeModel.FK__Teacher__Standar__3E52440B" />
+        <AssociationConnector Association="EmployeeModel.FK__StudentAd__Stude__46E78A0C" />
+        <AssociationConnector Association="EmployeeModel.StudentCourse" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
