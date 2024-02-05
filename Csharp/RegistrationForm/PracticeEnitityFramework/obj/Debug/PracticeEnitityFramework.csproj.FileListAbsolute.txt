@@ -1,0 +1,12 @@
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\bin\Debug\PracticeEnitityFramework.exe.config
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\bin\Debug\PracticeEnitityFramework.exe
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\bin\Debug\PracticeEnitityFramework.pdb
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\obj\Debug\PracticeEnitityFramework.csproj.AssemblyReference.cache
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\obj\Debug\PracticeEnitityFramework.csproj.CoreCompileInputs.cache
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\obj\Debug\PracticeEnitityFramework.exe
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\obj\Debug\PracticeEnitityFramework.pdb
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\bin\Debug\EntityFramework.dll
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\bin\Debug\EntityFramework.SqlServer.dll
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\bin\Debug\EntityFramework.xml
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\bin\Debug\EntityFramework.SqlServer.xml
+D:\RegistrationForm\Csharp\RegistrationForm\PracticeEnitityFramework\obj\Debug\PracticeEnitityFramework.csproj.CopyComplete

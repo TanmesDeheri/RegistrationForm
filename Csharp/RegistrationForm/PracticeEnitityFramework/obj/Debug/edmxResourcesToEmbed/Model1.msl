@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeeModelStoreContainer" CdmEntityContainer="EF_Demo_DBEntities">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="EmployeeModel.Department">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EmployeeModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="EmployeeModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Standards">
+      <EntityTypeMapping TypeName="EmployeeModel.Standard">
+        <MappingFragment StoreEntitySet="Standard">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StandardName" ColumnName="StandardName" />
+          <ScalarProperty Name="StandardId" ColumnName="StandardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="EmployeeModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StandardId" ColumnName="StandardId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentAddresses">
+      <EntityTypeMapping TypeName="EmployeeModel.StudentAddress">
+        <MappingFragment StoreEntitySet="StudentAddress">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="EmployeeModel.Teacher">
+        <MappingFragment StoreEntitySet="Teacher">
+          <ScalarProperty Name="StandardId" ColumnName="StandardId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwStudentCourses">
+      <EntityTypeMapping TypeName="EmployeeModel.vwStudentCourse">
+        <MappingFragment StoreEntitySet="vwStudentCourse">
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="StudentCourse" TypeName="EmployeeModel.StudentCourse" StoreEntitySet="StudentCourse">
+      <EndProperty Name="Student">
+        <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+      </EndProperty>
+      <EndProperty Name="Course">
+        <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="spDeleteStudent" FunctionName="EmployeeModel.Store.spDeleteStudent" />
+    <FunctionImportMapping FunctionImportName="spGetCoursesByStudentId" FunctionName="EmployeeModel.Store.spGetCoursesByStudentId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmployeeModel.spGetCoursesByStudentId_Result">
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsertStudent" FunctionName="EmployeeModel.Store.spInsertStudent" />
+    <FunctionImportMapping FunctionImportName="spUpdateStudent" FunctionName="EmployeeModel.Store.spUpdateStudent" />
+  </EntityContainerMapping>
+</Mapping>
