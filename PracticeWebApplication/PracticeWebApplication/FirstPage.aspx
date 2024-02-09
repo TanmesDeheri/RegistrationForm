@@ -5,6 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <webopt:bundlereference runat="server" path="~/Content/css" />
+     <asp:PlaceHolder runat="server">
+     <%: Scripts.Render("~/bundles/modernizr") %>
+ </asp:PlaceHolder>
     <style>
         .container {
             margin: 0px;
@@ -86,7 +90,7 @@
                 </div>
             </div>
             <p>
-                <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButtonClick" />
+                <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButtonClick" CssClass="btn-outline-success" />
             </p>
         </div>
         <div class="Result" id="Result">
