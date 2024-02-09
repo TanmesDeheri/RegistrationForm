@@ -4,12 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="d-flex m-3">
-            <div class="d-flex" style="width: 50%">
+        <div class="d-flex flex-sm-column flex-xs-column flex-lg-row m-3">
+            <div class="d-flex flex-column w-50">
                 <div>
                     <p>The DataList shows data of DataTable</p>
                 </div>
@@ -30,7 +32,7 @@
                     </ItemTemplate>
                 </asp:DataList>
             </div>
-            <div class="d-flex" style="width: 50%">
+            <div class="d-flex">
                 <div>
                     <p>This DataGrid contains DataTable records </p>
                     <asp:DataGrid ID="DataGrid1" runat="server">

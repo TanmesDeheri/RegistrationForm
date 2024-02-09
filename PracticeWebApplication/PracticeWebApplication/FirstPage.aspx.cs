@@ -17,7 +17,7 @@ namespace PracticeWebApplication
             genderId.Text = "";
             ShowDate.Text = "";
             ShowCourses.Text = "None";
-            Response.Cookies["computer"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["computer"].Expires = DateTime.Now.AddDays(-1);   
         }
         protected void SubmitButtonClick(object sender, EventArgs e)
         {
