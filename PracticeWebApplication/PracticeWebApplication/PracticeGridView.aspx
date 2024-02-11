@@ -51,7 +51,7 @@
             </div>
 
             <div>
-                <asp:GridView ID="GridView1" AllowPaging="true" PageSize="20" OnPageIndexChanging="GridView1_PageIndexChanging" runat="server" CssClass="dark-theme-gridview">
+                <asp:GridView ID="GridView1" AllowPaging="true" PageSize="20" OnPageIndexChanging="GridView1_PageIndexChanging" runat="server" AllowSorting="true" OnSorting="GridViewSorting" CssClass="dark-theme-gridview">
                     <PagerSettings Mode="NumericFirstLast" Position="Bottom" />
                     <HeaderStyle CssClass="dark-theme-header" />
                     <RowStyle CssClass="dark-theme-row" />

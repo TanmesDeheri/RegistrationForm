@@ -15,8 +15,8 @@ namespace PracticeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           // try
-           // {
+            try
+            {
 
                 using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DataBaseConnection"].ConnectionString))
                 {
@@ -28,11 +28,12 @@ namespace PracticeWebApplication
                     GridView1.DataBind();
                     con.Close();
                 }
-            //}
-            //catch(Exception ex) {
-            //    ErrorMessage.Text = String.Empty;
-            //    ErrorMessage.Text = Convert.ToString(ex);
-            //}
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage.Text = String.Empty;
+                ErrorMessage.Text = ex.Message;
+            }
         }
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -79,5 +80,9 @@ namespace PracticeWebApplication
             }
         }
 
+        protected void GridView1_Sorting(object sender, GridViewSortEventArgs e)
+        {
+
+        }
     }
 }
