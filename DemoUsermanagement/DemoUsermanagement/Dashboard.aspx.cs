@@ -11,7 +11,22 @@ namespace DemoUsermanagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+               
+                if (Session["Username"] != null)
+                {
+                 
+                    string username = Session["Username"].ToString();
 
+
+                    labelWelcomeMessage.Text = "Welcome, " + username + "!";
+                }
+                else
+                {
+                    Response.Redirect("~/LoginPage.aspx");
+                }
+            }
         }
     }
 }
