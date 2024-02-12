@@ -15,11 +15,20 @@ namespace DemoUsermanagement
         }
         protected void OnLoggingIn(object sender, EventArgs e)
         {
-            string username = txtEmail.Text.Trim();
+            string userEmail = txtEmail.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
-            Session["Username"] = username;
+            Session["Username"] = userEmail;
+            Session["password"] = password;
 
-            Response.Redirect("~/Dashboard.aspx?username=" + Server.UrlEncode(username));
+            if (String.Equals(userEmail, "deheritanmessom@gmail.com") && String.Equals(password,"123!@#"))
+            {
+                Response.Redirect("~/Dashboard.aspx?userEmail=" + Server.UrlEncode(userEmail));
+            }
+            else
+            {
+                Response.Redirect("~/PageNotFound.aspx");
+            }
         }
     }
 }
