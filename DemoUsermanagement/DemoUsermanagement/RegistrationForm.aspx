@@ -77,14 +77,30 @@
             <div class=" container-fluid">
                 <div class="row mb-3">
                     <label for="Country" class="col-sm-3 col-form-label">Country:</label>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
                     <div class="col-sm-9">
-                        <asp:DropDownList ID="Country" runat="server" CssClass="form-select"></asp:DropDownList>
+                        <asp:UpdatePanel ID="UpdatePanelForCountry" runat="server">
+                            <ContentTemplate>
+                                <asp:DropDownList ID="Country" runat="server" CssClass="form-select" AutoPostBack="true" OnSelectedIndexChanged="CountryIndexChanged"></asp:DropDownList>
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="Country" />
+                            </Triggers>
+                        </asp:UpdatePanel>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="state" class="col-sm-3 col-form-label">State:</label>
                     <div class="col-sm-9">
-                        <asp:DropDownList ID="state" runat="server" CssClass="form-select"></asp:DropDownList>
+                        <asp:UpdatePanel runat="server" ID="UpdatePanelForState">
+                            <ContentTemplate>
+                                <asp:DropDownList ID="State" runat="server" CssClass="form-select" AutoPostBack="true"></asp:DropDownList>
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="State" />
+                            </Triggers>
+                        </asp:UpdatePanel>
                     </div>
                 </div>
             </div>
@@ -239,5 +255,7 @@
             <asp:Label runat="server" ID="Result"></asp:Label>
         </div>
     </form>
+  <!--  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="StateFunctionality.js"></script> -->
 </body>
 </html>

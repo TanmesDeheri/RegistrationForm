@@ -105,6 +105,24 @@ namespace DemoUsermanagement
         protected global::System.Web.UI.WebControls.TextBox altemail;
 
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+
+        /// <summary>
+        /// UpdatePanelForCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanelForCountry;
+
+        /// <summary>
         /// Country control.
         /// </summary>
         /// <remarks>
@@ -114,13 +132,22 @@ namespace DemoUsermanagement
         protected global::System.Web.UI.WebControls.DropDownList Country;
 
         /// <summary>
-        /// state control.
+        /// UpdatePanelForState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList state;
+        protected global::System.Web.UI.UpdatePanel UpdatePanelForState;
+
+        /// <summary>
+        /// State control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList State;
 
         /// <summary>
         /// B10Marks control.
