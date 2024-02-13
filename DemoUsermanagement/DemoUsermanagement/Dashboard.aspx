@@ -28,13 +28,13 @@
                     <!-- Links -->
                     <ul class=" navbar-nav">
                         <li class=" nav-item">
-                            <a class="nav-link" href="#">DataTable</a>
+                            <a class="nav-link" href="#" id="dataTableLink">DataTable</a>
                         </li>
                         <li class=" nav-item">
-                            <a class="nav-link" href="#">Link2</a>
+                            <a class="nav-link" href="#" id="secondLink">Link2</a>
                         </li>
                         <li class=" nav-item">
-                            <a class="nav-link" href="#">Link 3</a>
+                            <a class="nav-link" href="#" id="thirdLink" >Link 3</a>
                         </li>
                     </ul>
                     <a class=" navbar-brand">
@@ -44,10 +44,29 @@
 
             </nav>
         </div>
-        <div class=" container-fluid mt-4">
+        <div class=" container-fluid mt-4" id="TableDataId">
             <uc:TableDataFromDB runat="server" ID="TableDataRecord" />
         </div>
     </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#TableData").hide();
+        $("#dataTableLink").click(function (e) {
+            e.preventDefault();
+            $("#TableDataId").show();
+        });
+        $("#secondLink").click(function (e) {
+            e.preventDefault();
+            $("#TableDataId").hide();
+        });
+        $("#thirdLink").click(function (e) {
+            e.preventDefault();
+            $("#TableDataId").hide();
+        });
+    });
+</script>
+
 </body>
 </html>
 <!--https://localhost:44306/Dashboard?userEmail=deheritanmessom%40gmail.com-->
