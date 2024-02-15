@@ -1,4 +1,4 @@
-/.vs/
-/packages/
-/bin
-/obj
+*.config
+/bin/
+/obj/
+/Properties/
