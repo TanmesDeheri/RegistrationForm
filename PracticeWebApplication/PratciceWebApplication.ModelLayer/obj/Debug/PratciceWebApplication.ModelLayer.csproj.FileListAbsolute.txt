@@ -1,0 +1,6 @@
+D:\RegistrationForm\PracticeWebApplication\PratciceWebApplication.ModelLayer\bin\Debug\PratciceWebApplication.ModelLayer.dll
+D:\RegistrationForm\PracticeWebApplication\PratciceWebApplication.ModelLayer\bin\Debug\PratciceWebApplication.ModelLayer.pdb
+D:\RegistrationForm\PracticeWebApplication\PratciceWebApplication.ModelLayer\obj\Debug\PratciceWebApplication.ModelLayer.csproj.AssemblyReference.cache
+D:\RegistrationForm\PracticeWebApplication\PratciceWebApplication.ModelLayer\obj\Debug\PratciceWebApplication.ModelLayer.csproj.CoreCompileInputs.cache
+D:\RegistrationForm\PracticeWebApplication\PratciceWebApplication.ModelLayer\obj\Debug\PratciceWebApplication.ModelLayer.dll
+D:\RegistrationForm\PracticeWebApplication\PratciceWebApplication.ModelLayer\obj\Debug\PratciceWebApplication.ModelLayer.pdb
